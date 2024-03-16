@@ -4,9 +4,17 @@ tasks:
   default:
     cmd: task --list-all
     silent: true
+  
+  play-ui: sbt "run 8080"
+  openweather-producer:
+    dir: openweather
+    cmd: sbt "run"
+  platform-components: docker compose up -d --build --remove-orphans
+
   up:
+    deps:
+      - play-ui
+      - openweather-producer
+      - platform-components
     cmds:
-      - docker-compose up -d
-      - source ~/.zprofile
-      - sbt "run 8080"
-      - cd openweather-kafka-producer && sbt "run"
+      - echo "All services are up and running"

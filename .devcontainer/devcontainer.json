@@ -46,6 +46,7 @@
   "postCreateCommand": ".devcontainer/scripts/post-create.sh",
   "postStartCommand": "nohup bash -c '.devcontainer/scripts/post-start.sh &' > /tmp/post-start.log 2>&1",
   "forwardPorts": [
-    8080
+    8080,
+    5601
   ]
 }

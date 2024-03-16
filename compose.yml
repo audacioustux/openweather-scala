@@ -67,13 +67,5 @@ services:
       - ./conf/pipeline.conf:/pipeline.conf:ro
     command: logstash -f /pipeline.conf
 
-  openweather_producer:
-    build:
-      context: openweather
-      dockerfile: Dockerfile
-    restart: always
-    depends_on:
-      - kafka
-
 volumes:
   elasticsearch-data:
