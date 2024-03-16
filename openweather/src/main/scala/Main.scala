@@ -105,7 +105,6 @@ object OpenweatherProducer {
           )
           .flatMap { res =>
             Unmarshal(res).to[String].map { data =>
-              context.log.debug(s"Received data for $city: $data")
               json[WeatherResponse](data)
             }
           }

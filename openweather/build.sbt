@@ -20,3 +20,4 @@ lazy val root = project
       "ch.qos.logback" % "logback-classic" % "1.5.3"
     )
   )
+  .enablePlugins(JavaAppPackaging)
