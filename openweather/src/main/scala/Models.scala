@@ -1,4 +1,4 @@
-import upickle.default.{ReadWriter => RW, macroRW, read => json}
+import upickle.default.{ macroRW, read as json, ReadWriter as RW }
 
 case class WeatherData(
     created_at: String,
@@ -11,58 +11,41 @@ case class WeatherData(
     max_temp: Double,
     min_temp: Double,
     feels_like: Double,
-    humidity: Int
+    humidity: Int,
 )
 
-case class Coord(
-    lon: Float,
-    lat: Float
-)
+case class Coord(lon: Float, lat: Float)
+
 object Coord {
   implicit val rw: RW[Coord] = macroRW
 }
 
-case class Weather(
-    id: Int,
-    main: String,
-    description: String
-)
+case class Weather(id: Int, main: String, description: String)
+
 object Weather {
   implicit val rw: RW[Weather] = macroRW
 }
 
-case class Main(
-    temp: Float,
-    pressure: Float,
-    humidity: Int,
-    temp_min: Float,
-    temp_max: Float,
-    feels_like: Float
-)
+case class Main(temp: Float, pressure: Float, humidity: Int, temp_min: Float, temp_max: Float, feels_like: Float)
+
 object Main {
   implicit val rw: RW[Main] = macroRW
 }
 
-case class Wind(
-    speed: Float,
-    deg: Float
-)
+case class Wind(speed: Float, deg: Float)
+
 object Wind {
   implicit val rw: RW[Wind] = macroRW
 }
 
-case class Clouds(
-    all: Int
-)
+case class Clouds(all: Int)
+
 object Clouds {
   implicit val rw: RW[Clouds] = macroRW
 }
 
-case class Sys(
-    country: String,
-    sunrise: Int,
-    sunset: Int
-)
+case class Sys(country: String, sunrise: Int, sunset: Int)
+
 object Sys {
   implicit val rw: RW[Sys] = macroRW
 }
@@ -76,18 +59,15 @@ case class WeatherResponse(
     wind: Wind,
     clouds: Clouds,
     sys: Sys,
-    name: String
+    name: String,
 )
+
 object WeatherResponse {
   implicit val rw: RW[WeatherResponse] = macroRW
 }
 
-case class OpenWeatherBaseCity(
-    id: Int,
-    name: String,
-    lon: Float,
-    lat: Float
-)
+case class OpenWeatherBaseCity(id: Int, name: String, lon: Float, lat: Float)
+
 object OpenWeatherBaseCity {
   implicit val rw: RW[OpenWeatherBaseCity] = macroRW
 }
