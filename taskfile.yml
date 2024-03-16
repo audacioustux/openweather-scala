@@ -1,0 +1,12 @@
+version: "3"
+
+tasks:
+  default:
+    cmd: task --list-all
+    silent: true
+  up:
+    cmds:
+      - docker-compose up -d
+      - source ~/.zprofile
+      - sbt "run 8080"
+      - cd openweather-kafka-producer && sbt "run"
