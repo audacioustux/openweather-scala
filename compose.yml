@@ -57,6 +57,16 @@ services:
     restart: always
     mem_limit: 1g
 
+  openweather_producer:
+    build:
+      context: producer
+      dockerfile: Dockerfile
+    restart: always
+    environment:
+      - OPENWEATHER_API_KEY=${OPENWEATHER_API_KEY:?}
+    depends_on:
+      - kafka
+
   logstash:
     restart: always
     depends_on:

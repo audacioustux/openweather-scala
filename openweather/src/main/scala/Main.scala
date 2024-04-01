@@ -17,7 +17,9 @@ import akka.http.scaladsl.model.*
 import akka.http.scaladsl.unmarshalling.Unmarshal
 import akka.kafka.ProducerSettings
 import akka.kafka.scaladsl.Producer
-
+import org.apache.kafka.common.serialization.{Deserializer, Serializer}
+import upickle.default._
+ 
 @main
 def hello(): Unit = {
   given system: ActorSystem[Nothing] = ActorSystem(OpenweatherProducer(), "OpenweatherProducer")
@@ -130,16 +132,19 @@ object OpenweatherProducer {
               )
             }
         }
+    
+    val weatherDataSerializer: Serializer[WeatherData] = (_: String, data: WeatherData) => {
+      writeBinary[WeatherData](data)
+    }
 
     val config = context.system.settings.config.getConfig("akka.kafka.producer")
-    val producerSettings = ProducerSettings(config, new StringSerializer, new StringSerializer)
+    val producerSettings = ProducerSettings(config, new StringSerializer, weatherDataSerializer)
       .withBootstrapServers(kfk_bootstrap_server)
 
     source
-      .throttle(1000, 1.day)
+      .throttle(3000, 1.day)
       .via(flow)
-      .map(_.toString)
-      .map(value => new ProducerRecord[String, String](kfk_topic, value))
+      .map(value => new ProducerRecord[String, WeatherData](kfk_topic, value))
       .runWith(Producer.plainSink(producerSettings))
 
     Behaviors.empty

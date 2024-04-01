@@ -1,16 +1,16 @@
 {
     "version": "1.4.0",
     "project": {
-        "name": "harsh-build-build",
-        "directory": "/workspaces/harsh/project/project",
-        "workspaceDir": "/workspaces/harsh/project/project",
+        "name": "openweather-scala-build-build",
+        "directory": "/workspaces/openweather-scala/project/project",
+        "workspaceDir": "/workspaces/openweather-scala/project/project",
         "sources": [
-            "/workspaces/harsh/project/project/src/main/scala",
-            "/workspaces/harsh/project/project/src/main/scala-2.12",
-            "/workspaces/harsh/project/project/src/main/scala-2",
-            "/workspaces/harsh/project/project/src/main/java",
-            "/workspaces/harsh/project/project/src/main/scala-sbt-1.0",
-            "/workspaces/harsh/project/project/target/scala-2.12/sbt-1.0/src_managed/main"
+            "/workspaces/openweather-scala/project/project/src/main/scala",
+            "/workspaces/openweather-scala/project/project/src/main/scala-2.12",
+            "/workspaces/openweather-scala/project/project/src/main/scala-2",
+            "/workspaces/openweather-scala/project/project/src/main/java",
+            "/workspaces/openweather-scala/project/project/src/main/scala-sbt-1.0",
+            "/workspaces/openweather-scala/project/project/target/scala-2.12/sbt-1.0/src_managed/main"
         ],
         "dependencies": [
             
@@ -103,11 +103,11 @@
             "/home/vscode/.cache/coursier/v1/https/repo1.maven.org/maven2/org/reactivestreams/reactive-streams/1.0.3/reactive-streams-1.0.3.jar",
             "/home/vscode/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/config/1.4.2/config-1.4.2.jar"
         ],
-        "out": "/workspaces/harsh/project/project/.bloop/harsh-build-build",
-        "classesDir": "/workspaces/harsh/project/project/.bloop/harsh-build-build/scala-2.12/sbt-1.0/classes",
+        "out": "/workspaces/openweather-scala/project/project/.bloop/openweather-scala-build-build",
+        "classesDir": "/workspaces/openweather-scala/project/project/.bloop/openweather-scala-build-build/scala-2.12/sbt-1.0/classes",
         "resources": [
-            "/workspaces/harsh/project/project/src/main/resources",
-            "/workspaces/harsh/project/project/target/scala-2.12/sbt-1.0/resource_managed/main"
+            "/workspaces/openweather-scala/project/project/src/main/resources",
+            "/workspaces/openweather-scala/project/project/target/scala-2.12/sbt-1.0/resource_managed/main"
         ],
         "scala": {
             "organization": "org.scala-lang",
@@ -123,8 +123,8 @@
             "jars": [
                 "/home/vscode/.sbt/boot/scala-2.12.18/lib/scala-library.jar",
                 "/home/vscode/.sbt/boot/scala-2.12.18/lib/scala-compiler.jar",
-                "/home/vscode/.sbt/boot/scala-2.12.18/lib/scala-reflect.jar",
-                "/home/vscode/.sbt/boot/scala-2.12.18/lib/scala-xml_2.12-2.1.0.jar"
+                "/home/vscode/.sbt/boot/scala-2.12.18/lib/scala-xml_2.12-2.1.0.jar",
+                "/home/vscode/.sbt/boot/scala-2.12.18/lib/scala-reflect.jar"
             ],
             "setup": {
                 "order": "mixed",
@@ -215,7 +215,7 @@
             "config": {
                 "home": "/usr/java/graalvm",
                 "options": [
-                    "-Duser.dir=/workspaces/harsh/project/project"
+                    "-Duser.dir=/workspaces/openweather-scala/project/project"
                 ]
             },
             "mainClass": [
@@ -224,11 +224,11 @@
             "runtimeConfig": {
                 "home": "/usr/java/graalvm",
                 "options": [
-                    "-Duser.dir=/workspaces/harsh/project/project"
+                    "-Duser.dir=/workspaces/openweather-scala/project/project"
                 ]
             },
             "classpath": [
-                "/workspaces/harsh/project/project/.bloop/harsh-build-build/scala-2.12/sbt-1.0/classes",
+                "/workspaces/openweather-scala/project/project/.bloop/openweather-scala-build-build/scala-2.12/sbt-1.0/classes",
                 "/home/vscode/.cache/coursier/v1/https/repo1.maven.org/maven2/ch/epfl/scala/sbt-bloop_2.12_1.0/1.5.15/sbt-bloop_2.12_1.0-1.5.15.jar",
                 "/home/vscode/.cache/coursier/v1/https/repo1.maven.org/maven2/ch/epfl/scala/bloop-config_2.12/1.5.5/bloop-config_2.12-1.5.5.jar",
                 "/home/vscode/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/plokhotnyuk/jsoniter-scala/jsoniter-scala-core_2.12/2.4.0/jsoniter-scala-core_2.12-2.4.0.jar",

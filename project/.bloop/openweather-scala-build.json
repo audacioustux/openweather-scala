@@ -1,16 +1,16 @@
 {
     "version": "1.4.0",
     "project": {
-        "name": "harsh-build",
-        "directory": "/workspaces/harsh/project",
-        "workspaceDir": "/workspaces/harsh/project",
+        "name": "openweather-scala-build",
+        "directory": "/workspaces/openweather-scala/project",
+        "workspaceDir": "/workspaces/openweather-scala/project",
         "sources": [
-            "/workspaces/harsh/project/src/main/scala",
-            "/workspaces/harsh/project/src/main/scala-2.12",
-            "/workspaces/harsh/project/src/main/scala-2",
-            "/workspaces/harsh/project/src/main/java",
-            "/workspaces/harsh/project/src/main/scala-sbt-1.0",
-            "/workspaces/harsh/project/target/scala-2.12/sbt-1.0/src_managed/main"
+            "/workspaces/openweather-scala/project/src/main/scala",
+            "/workspaces/openweather-scala/project/src/main/scala-2.12",
+            "/workspaces/openweather-scala/project/src/main/scala-2",
+            "/workspaces/openweather-scala/project/src/main/java",
+            "/workspaces/openweather-scala/project/src/main/scala-sbt-1.0",
+            "/workspaces/openweather-scala/project/target/scala-2.12/sbt-1.0/src_managed/main"
         ],
         "dependencies": [
             
@@ -158,11 +158,11 @@
             "/home/vscode/.cache/coursier/v1/https/repo1.maven.org/maven2/com/thesamet/scalapb/lenses_2.12/0.11.15/lenses_2.12-0.11.15.jar",
             "/home/vscode/.cache/coursier/v1/https/repo1.maven.org/maven2/com/google/protobuf/protobuf-java/3.19.6/protobuf-java-3.19.6.jar"
         ],
-        "out": "/workspaces/harsh/project/.bloop/harsh-build",
-        "classesDir": "/workspaces/harsh/project/.bloop/harsh-build/scala-2.12/sbt-1.0/classes",
+        "out": "/workspaces/openweather-scala/project/.bloop/openweather-scala-build",
+        "classesDir": "/workspaces/openweather-scala/project/.bloop/openweather-scala-build/scala-2.12/sbt-1.0/classes",
         "resources": [
-            "/workspaces/harsh/project/src/main/resources",
-            "/workspaces/harsh/project/target/scala-2.12/sbt-1.0/resource_managed/main"
+            "/workspaces/openweather-scala/project/src/main/resources",
+            "/workspaces/openweather-scala/project/target/scala-2.12/sbt-1.0/resource_managed/main"
         ],
         "scala": {
             "organization": "org.scala-lang",
@@ -177,8 +177,8 @@
             "jars": [
                 "/home/vscode/.sbt/boot/scala-2.12.18/lib/scala-library.jar",
                 "/home/vscode/.sbt/boot/scala-2.12.18/lib/scala-compiler.jar",
-                "/home/vscode/.sbt/boot/scala-2.12.18/lib/scala-reflect.jar",
-                "/home/vscode/.sbt/boot/scala-2.12.18/lib/scala-xml_2.12-2.1.0.jar"
+                "/home/vscode/.sbt/boot/scala-2.12.18/lib/scala-xml_2.12-2.1.0.jar",
+                "/home/vscode/.sbt/boot/scala-2.12.18/lib/scala-reflect.jar"
             ],
             "setup": {
                 "order": "mixed",
@@ -269,7 +269,7 @@
             "config": {
                 "home": "/usr/java/graalvm",
                 "options": [
-                    "-Duser.dir=/workspaces/harsh/project"
+                    "-Duser.dir=/workspaces/openweather-scala/project"
                 ]
             },
             "mainClass": [
@@ -278,11 +278,11 @@
             "runtimeConfig": {
                 "home": "/usr/java/graalvm",
                 "options": [
-                    "-Duser.dir=/workspaces/harsh/project"
+                    "-Duser.dir=/workspaces/openweather-scala/project"
                 ]
             },
             "classpath": [
-                "/workspaces/harsh/project/.bloop/harsh-build/scala-2.12/sbt-1.0/classes",
+                "/workspaces/openweather-scala/project/.bloop/openweather-scala-build/scala-2.12/sbt-1.0/classes",
                 "/home/vscode/.cache/coursier/v1/https/repo1.maven.org/maven2/ch/epfl/scala/sbt-bloop_2.12_1.0/1.5.15/sbt-bloop_2.12_1.0-1.5.15.jar",
                 "/home/vscode/.cache/coursier/v1/https/repo1.maven.org/maven2/org/playframework/sbt-plugin_2.12_1.0/3.0.2/sbt-plugin_2.12_1.0-3.0.2.jar",
                 "/home/vscode/.cache/coursier/v1/https/repo1.maven.org/maven2/org/foundweekends/giter8/sbt-giter8-scaffold_2.12_1.0/0.16.2/sbt-giter8-scaffold-0.16.2.jar",

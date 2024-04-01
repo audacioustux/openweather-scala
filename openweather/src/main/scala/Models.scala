@@ -13,6 +13,9 @@ case class WeatherData(
     feels_like: Double,
     humidity: Int,
 )
+object WeatherData {
+  implicit val rw: RW[WeatherData] = macroRW
+}
 
 case class Coord(lon: Float, lat: Float)
 
